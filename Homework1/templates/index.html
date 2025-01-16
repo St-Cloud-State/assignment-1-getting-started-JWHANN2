@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application System</title>
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <h1>Acme Financial Loan Application System</h1>
+
+    <section id="acceptApplication">
+        <h2>Submit a New Application</h2>
+        <form id="applicationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <br>
+            <label for="zipcode">ZIP Code:</label>
+            <input type="text" id="zipcode" placeholder="Enter your ZIP code" required>
+            <br>
+            <button type="button" onclick="submitApplication()">Submit</button>
+        </form>
+        <p id="applicationResponse"></p>
+    </section>
+
+    <section id="checkStatus">
+        <h2>Check Application Status</h2>
+        <label for="statusId">Application ID:</label>
+        <input type="text" id="statusId" placeholder="Enter application ID">
+        <button type="button" onclick="checkApplicationStatus()">Check Status</button>
+        <p id="statusResponse">Status details will appear here (including name and ZIP code).</p>
+    </section>
+
+    <section id="changeStatus">
+        <h2>Update Application Status</h2>
+        <label for="updateId">Application ID:</label>
+        <input type="text" id="updateId" placeholder="Enter application ID">
+        <br>
+        <label for="newStatus">New Status:</label>
+        <input type="text" id="newStatus" placeholder="Enter new status">
+        <br>
+        <button type="button" onclick="updateApplicationStatus()">Update Status</button>
+        <p id="updateResponse"></p>
+    </section>
+</body>
+</html>
